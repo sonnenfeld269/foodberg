@@ -1,0 +1,61 @@
+@font-face {
+    font-family: alfaslab;
+    src: url("alfaslab.ttf") format("truetype");
+}
+
+.container {
+    font-family: "Open Sans";
+}
+
+.header {
+    .navigation {
+        display: flex;
+        padding: 20px;
+        a {
+            padding: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #aaa;
+            font-size: 22px;
+            font-weight: bold;
+            transition: all .5s;
+            position: relative;
+            &:hover {
+                color: chocolate;
+                &:after {
+                    width: 100%;
+                }
+            }
+            &:after {
+                transition: all .5s;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 0%;
+                content: '.';
+                color: transparent;
+                background: #aaa;
+                height: 1px;
+            }
+        }
+    }
+}
+
+.first {
+    font-family: alfaslab;
+    h1 {
+        font-size: 6em;
+        text-align: center;
+        padding: 20px;
+        color: #00B72A;
+        .middle {
+            font-size: 0.6em;
+        }
+    }
+}
+
+h1 {
+    font-weight: normal;
+}
