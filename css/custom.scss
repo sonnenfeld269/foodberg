@@ -1,27 +1,88 @@
-@font-face {
-    font-family: alfaslab;
-    src: url("alfaslab.ttf") format("truetype");
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+$main-font-color: #777070;
+@mixin breakpoint($point) {
+    @if $point==desktop {
+        @media (min-width: 70em) {
+            @content ;
+        }
+    }
+    @else if $point==laptop {
+        @media (min-width: 64em) {
+            @content ;
+        }
+    }
+    @else if $point==tablet {
+        @media (min-width: 50em) {
+            @content ;
+        }
+    }
+    @else if $point==phablet {
+        @media (min-width: 37.5em) {
+            @content ;
+        }
+    }
+    @else if $point==mobileonly {
+        @media (max-width: 37.5em) {
+            @content ;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+h2 {
+    color: $main-font-color;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 3em;
+    span {
+        display: block;
+        color: chocolate;
+        padding: 50px;
+        font-size: 5vw;
+        font-weight: bold;
+        letter-spacing: 10px;
+    }
 }
 
 .container {
-    font-family: "Open Sans";
+    margin-top: 150px;
 }
 
 .header {
     .navigation {
-        display: flex;
-        padding: 20px;
+        /* fixed on top */
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        background: #fff;
         a {
-            padding: 10px;
+            @include breakpoint(tablet) {
+                font-size: 22px;
+                margin: 0;
+                background: none;
+                padding: 24px;
+            }
             text-decoration: none;
             text-transform: uppercase;
-            color: #aaa;
-            font-size: 22px;
+            color: #8395f7;
+            font-size: 20px;
             font-weight: bold;
             transition: all .5s;
+            padding: 10px;
             position: relative;
+            margin: 2px;
             &:hover {
-                color: chocolate;
+                color: orange;
                 &:after {
                     width: 100%;
                 }
@@ -36,17 +97,56 @@
                 width: 0%;
                 content: '.';
                 color: transparent;
-                background: #aaa;
+                background: #8395f7;
                 height: 1px;
             }
         }
+        .mobileNav {
+            display: block;
+            @include breakpoint(tablet) {
+                display: none;
+            }
+            .open {
+                display: block;
+            }
+            .close {
+                display: none;
+            }
+            span {
+                padding: 0 10px 0 10px;
+            }
+        }
+        .links {
+            @include breakpoint(tablet) {
+                flex-direction: row;
+                padding: 20px;
+                background: none;
+                display: flex !important;
+            }
+            background: rgba(246, 244, 221, 0);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            .link {
+                background: beige;
+                @include breakpoint(tablet) {
+                    background: none;
+                }
+            }
+        }
+    }
+    .show {
+        background: white;
     }
 }
 
-.first {
-    font-family: alfaslab;
+.hero {
     h1 {
-        font-size: 6em;
+        @include breakpoint(phablet) {
+            display: block;
+        }
+        display: none;
+        font-size: 7vw;
         text-align: center;
         padding: 20px;
         color: chocolate;
@@ -54,9 +154,140 @@
             font-size: 0.6em;
         }
     }
+    .hashtag {
+        font-family: 'Luckiest Guy';
+        color: blue;
+        font-size: 80px;
+        display: flex;
+        justify-content: center;
+        padding: 70px;
+    }
 }
 
-h1 {
-    font-weight: normal;
+.action {
+    padding: 0 20px;
+    p {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 23px;
+        font-style: italic;
+    }
+    .action-item {
+        padding: 20px;
+        display: flex;
+        .item-detail {
+            padding: 10px;
+        }
+    }
 }
 
+.facts {
+    padding: 40px;
+    .showProblem {
+        color: $main-font-color;
+        text-align: center;
+        font-family: alfaslab;
+        font-weight: 100;
+        font-size: 5vw;
+        letter-spacing: 10px;
+    }
+    .gallery {
+        img {
+            transition: all .9s;
+            border: 15px solid chocolate;
+            border-radius: 50%;
+            margin: 10px;
+            height: auto;
+            width: 150px;
+            &:hover {
+                width: 200px;
+            }
+        }
+    }
+}
+
+.takeaction {
+    .takeaction-items {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .item {
+            transition: all .9s;
+            color: white;
+            margin: 2px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+            border-radius: 5px;
+            span {
+                font-size: 25px;
+                font-family: 'Luckiest Guy';
+                margin-bottom: 20px;
+            }
+            svg {
+                color: white;
+                font-size: 150px;
+            }
+            img {
+                max-width: 150px;
+            }
+            p {
+                max-width: 300px;
+            }
+        }
+        .privat {
+            background: rgba(orange, 0.6);
+            transition: all 0.8s;
+            &:hover {
+                background: rgba(orange, 0.9);
+                p {
+                    display: block;
+                }
+            }
+        }
+        .biker {
+            background: rgba(#32c732, 0.6);
+            &:hover {
+                background: rgba(#32c732, 0.9);
+            }
+        }
+        .workshop {
+            background: rgba(#1f83ff, 0.6);
+            &:hover {
+                background: rgba(#1f83ff, 0.9);
+            }
+        }
+        .ngo {
+            background: rgba(#607777, 0.6);
+            &:hover {
+                background: rgba(#607777, 0.9);
+            }
+        }
+        .source {
+            background: rgba(#8a5e28, 0.6);
+            &:hover {
+                background: rgba(#8a5e28, 0.9);
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    .fa-heart {
+        color: red;
+    }
+}
+
+.debug {
+    border: 1px solid red;
+}
+
+section {
+    margin: 200px 0;
+    min-height: 500px;
+}

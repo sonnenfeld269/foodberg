@@ -1,0 +1,24 @@
+<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="imagebot_44" y2="-73.88138" x2="50.73636" y1="-77.7527" x1="48.67825">
+   <stop id="imagebot_51" stop-color="#fcf9fb" offset="0"/>
+   <stop id="imagebot_50" stop-color="#fcf9fb" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient xlink:href="#imagebot_44" id="imagebot_14" x1="-0.76968" y1="0.0011" x2="0.75949" y2="1.01813"/>
+ </defs>
+ <metadata id="imagebot_15">image/svg+xml</metadata>
+ <g id="imagebot_2" label="Layer 1">
+  <path transform="translate(-0.000457764 0.0000610352) matrix(1 0 0 1 229.669 -548.408)" label="Layer 1" opacity="0.8" fill="url(#imagebot_14)" d="M-206.82877,565.402L-204.79678,566.31995C-203.25441,567.03302 -204.04195,566.65714 -202.42896,567.44654C-206.55579,569.38717 -202.71708,570.06426 -206.86458,572.58344L-206.85438,571.88159C-206.80418,567.86996 -207.18393,573.80717 -206.82878,565.402L-206.82877,565.402z" id="imagebot_13"/>
+  <g transform="translate(-0.000457764 0.0000610352) matrix(1 0 0 1 229.669 -548.408)" label="Layer 1" id="imagebot_3">
+   <g id="imagebot_6">
+    <path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" d="M-218.32743,575.69067C-218.32743,575.69067 -206.82905,596.69033 -192.22524,575.69067" id="imagebot_9"/>
+    <path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="1.34892" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" id="imagebot_8" d="M-221.57143,575.18814C-221.57143,575.18814 -218.18638,577.24 -217.59853,573.20498"/>
+    <path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="1.34892" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" d="M-192.66018,572.78146C-192.66018,572.78146 -193.11429,576.7137 -189.20149,575.56613" id="imagebot_7"/>
+   </g>
+   <ellipse fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-dashoffset="0" ry="5.08029" rx="1.31387" cy="566.0556" cx="-210.35663" id="imagebot_5"/>
+   <ellipse fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-dashoffset="0" id="imagebot_4" cx="-201.23253" cy="566.0556" rx="1.31387" ry="5.08029"/>
+  </g>
+  <title>Layer 1</title>
+  <path transform="translate(0 -2) matrix(0.0536913 0 0 0.0536913 -6 6)" d="M 156.26948457402813 373.84051164772984 L 156.26948457402813 373.84051164772984 C 156.26948457402813 150.81643967317683 337.06635312483877 -29.980428877633607 560.0904250993916 -29.980428877633607 L 560.0904250993916 -29.980428877633607 C 667.1897009835579 -29.980428877633607 769.9038608826907 12.56495292475054 845.6351662712198 88.29601439459066 C 921.3665258639021 164.02707586443103 963.9113656247554 266.7412357635634 963.9113656247554 373.84051164772984 L 963.9113656247554 373.84051164772984 C 963.9113656247554 596.8634724371445 783.1133858888063 777.6614521730932 560.0904250993916 777.6614521730932 L 560.0904250993916 777.6614521730932 C 337.06635312483877 777.6614521730932 156.26948457402813 596.8634724371445 156.26948457402813 373.84051164772984 z" id="imagebot_57" fill-opacity="0" stroke-width="38" stroke="#000000" fill="#ccc"/>
+ </g>
+</svg>

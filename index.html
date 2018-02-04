@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/transformed.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
@@ -28,26 +30,118 @@
 
     <div class="container">
         <div class="header">
+
             <nav class="navigation">
-                <a href="#">Die Aktion</a>
-                <a href="#">Fakten</a>
-                <a href="#">Lösungen</a>
+                <div class="mobileNav">
+                    <a href="javascript:void(0);" class="icon"><span class="open">&#9776;</span><span class="close">x close</span></a>
+                </div>
+                <div class="links">
+                    <a href="#action" class="link">Die Aktion</a>
+                    <a href="#facts" class="link">Fakten</a>
+                    <a href="#" class="link">Forderungen</a>
+                    <a href="#" class="link">Lösungen</a>
+                    <a href="#" class="link">Kontakt</a>
+                </div>
             </nav>
         </div>
         <div class="content">
-            <section class="first">
-                <h1>Tag<br><span class="middle">der</span><br>Lebensmittelrettung</h1>
+            <section class="hero">
+                <div class="hashtag">
+                    <span>#foodBerg<span>
+                </div>
             </section>
-            <section>
-                Section 2
+            <section id="action" class="action">
+                <h2>dIE aKTION</h2>
+                <p>Der Foodberg repräsentiert ein enormes Problem von vielen. Die reglose Veschwendung der Ressourcen unserer Erde
+                Darum ist es jetzt Zeit lösungsorientiert an die Themen heranzutreten. Jeder ist eingeladen vor Ort seine Lösungen zu präsentieren.
+                Egal ob NGOs, BäuerInnen, LebensmittelretterInnen, KöchInnen oder Privatpersonen. Am Heldenplatz wollen wir ein Zeichen setzen dass
+                Lösungen vorhanden sind und diese ebenso als Forderung an die Politik stellen. <br><br> Es ist Zeit zu handeln!
+                </p>
+                <div class="action-items">
+                    <div class="item">
+                        <div class="time item-detail">10.00</div>
+                        <div class="title item-detail">ChainOfFood</div>
+                        <div class="description item-detail">
+                            Fahrradfahrer organisieren sich in Gruppen und holen von verschiedenen
+                            Betrieben und anderen Quellen Lebensmttel und
+                            und bringen sie zum Foodberg. Mehr Info gibts unter "Mach Mit!"
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="time item-detail">12.00</div>
+                        <div class="title item-detail">Foodberg</div>
+                        <div class="description item-detail">
+                            Ab 12 Uhr startet der Foodberg bis in den Abend hinein. Es ensteht ein
+                            Berg aus genießbaren Lebensmittel mitten am Heldenplatz. Jeder ist eingeladen mitzumachen,
+                            kann sich kostenlos Lebensmittel mitnehmen oder vor Ort kreativ sein! Mehr Details gibts unter
+                            "Mach Mit!"
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section>
-                Section 3
-            </section>
+            <section id="takeaction" class="takeaction">
+                <h2>Mach Mit!</h2>
+                <div class="takeaction-items">
+                    <div class="item biker">
+                        <span>Radfahrer</span>
+                    <img src="./img/bike.svg" alt="" />
+                    <p>Alle RadfahrerInnen mit Anhänger oder jene die ein Lastenrad haben sind eingeladen Lebensmittel zum #foodBerg
+                        zu bringen. Wir unterstützen dich bei der Suche von Lebensmittel und vernetzen dich mit Betrieben.
+                        Schreibe dazu einfach unserem Radbotschafter unter fahrrad.foodberg@gmail.com
+                    </p>
+                </div>
+                <div class="item privat">
+                    <span>Privatperson</span>
+                    <i class="far fa-smile"></i>
+                    <p>Jeder Mensch kann was vorbeibringen oder sich Lebensmittel holen. Kontaktier uns für Ratschläge rund
+                        um Dumpstern, Vernetzungen und
+                    </p>
+                </div>
+                <div class="item workshop">
+                    <span>Workshop</span>
+                    <img src="./img/toolbox.svg" alt="">
+                    <p>Vor Ort kann man auch einen kreativen Workshop anmelden. Alles was mit der Thematik von Lebensmittel
+                        hat kann man einbringen. Willst du zum Beispiel eine mobile Küche vor Ort aufstellen, hast aber keine
+                        Transportmöglichkeit? Egal. Schreib uns trotzdem. Vielleicht können wir dich mit einem unserer Fahrer
+                        vernetzen.
+                    </p>
+                </div>
         </div>
-        <div class="footer">
-            Footer
+
+        <div class="takeaction-items">
+            <div class="item ngo">
+                <span>NGO's</span>
+                <img src="./img/ngo.svg" alt="">
+                <p>Jeder Mensch kann was vorbeibringen oder sich Lebensmittel holen. Kontaktier uns für Ratschläge rund um Dumpstern,
+                    Vernetzungen und
+                </p>
+            </div>
+            <div class="item source">
+                <span>BAUERN & BETRIEBE</span>
+                <img src="./img/store.svg" alt="">
+                <p>Auch
+                </p>
+            </div>
         </div>
+        </section>
+        <section id="facts" class="facts">
+            <h2>Facts</h2>
+            <div class="showProblem debug">
+                <span id="truth">Some text to the image</span>
+            </div>
+            <div class="gallery debug">
+                <img id="fact1" src="./img/dumpster1.jpg" alt="">
+                <img id="fact2" src="./img/dumpster1.jpg" alt="">
+                <img id="fact3" src="./img/dumpster1.jpg" alt="">
+            </div>
+        </section>
+        <section>
+            Section 3
+        </section>
+    </div>
+    <div class="footer">
+        <p>Handmade with <i class="fas fa-heart"></i> by Ifraimov David</p>
+    </div>
 
     </div>
 
@@ -61,7 +155,56 @@
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        //toggle navigation
+        $(".icon").click(function () {
+            if ($(".links").css("display") == "flex") {
+                $(".links").slideUp();
+                $(".open").css("display", "block");
+                $(".close").css("display", "none");
+            } else {
+                $(".links").slideDown();
+                $(".links").css("display", "flex");
+                $(".open").css("display", "none");
+                $(".close").css("display", "block");
+            }
 
+
+        });
+
+        $(window).scroll(function () {
+            // 100 = The point you would like to fade the nav in.
+
+            if ($(window).scrollTop() > 100) {
+
+                $('.navigation').addClass('show');
+
+            } else {
+
+                $('.navigation').removeClass('show');
+
+            };
+        });
+
+        var truth = document.getElementById("truth");
+
+        var fact1 = document.getElementById("fact1");
+        var fact2 = document.getElementById("fact2");
+        var fact3 = document.getElementById("fact3");
+        var text1 = "Text zu Fakt 1";
+        var text2 = "Text zu Fakt 2";
+        var text3 = "Text zu Fakt 3";
+
+        fact1.addEventListener("mouseover", function (event) {
+            truth.innerHTML = text1;
+        }, false);
+        fact2.addEventListener("mouseover", function (event) {
+            truth.innerHTML = text2;
+        }, false);
+        fact3.addEventListener("mouseover", function (event) {
+            truth.innerHTML = text3;
+        }, false);
+    </script>
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;

@@ -1,24 +1,52 @@
-@font-face {
-  font-family: alfaslab;
-  src: url("alfaslab.ttf") format("truetype"); }
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Luckiest Guy', cursive; }
+
+h2 {
+  color: #777070;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 3em; }
+  h2 span {
+    display: block;
+    color: chocolate;
+    padding: 50px;
+    font-size: 5vw;
+    font-weight: bold;
+    letter-spacing: 10px; }
 
 .container {
-  font-family: "Open Sans"; }
+  margin-top: 150px; }
 
 .header .navigation {
-  display: flex;
-  padding: 20px; }
+  /* fixed on top */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff; }
   .header .navigation a {
-    padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #aaa;
-    font-size: 22px;
+    color: #8395f7;
+    font-size: 20px;
     font-weight: bold;
     transition: all .5s;
-    position: relative; }
+    padding: 10px;
+    position: relative;
+    margin: 2px; }
+    @media (min-width: 50em) {
+      .header .navigation a {
+        font-size: 22px;
+        margin: 0;
+        background: none;
+        padding: 24px; } }
     .header .navigation a:hover {
-      color: chocolate; }
+      color: orange; }
       .header .navigation a:hover:after {
         width: 100%; }
     .header .navigation a:after {
@@ -31,18 +59,150 @@
       width: 0%;
       content: '.';
       color: transparent;
-      background: #aaa;
+      background: #8395f7;
       height: 1px; }
+  .header .navigation .mobileNav {
+    display: block; }
+    @media (min-width: 50em) {
+      .header .navigation .mobileNav {
+        display: none; } }
+    .header .navigation .mobileNav .open {
+      display: block; }
+    .header .navigation .mobileNav .close {
+      display: none; }
+    .header .navigation .mobileNav span {
+      padding: 0 10px 0 10px; }
+  .header .navigation .links {
+    background: rgba(246, 244, 221, 0);
+    display: none;
+    flex-direction: column;
+    justify-content: center; }
+    @media (min-width: 50em) {
+      .header .navigation .links {
+        flex-direction: row;
+        padding: 20px;
+        background: none;
+        display: flex !important; } }
+    .header .navigation .links .link {
+      background: beige; }
+      @media (min-width: 50em) {
+        .header .navigation .links .link {
+          background: none; } }
 
-.first {
-  font-family: alfaslab; }
-  .first h1 {
-    font-size: 6em;
-    text-align: center;
+.header .show {
+  background: white; }
+
+.hero h1 {
+  display: none;
+  font-size: 7vw;
+  text-align: center;
+  padding: 20px;
+  color: chocolate; }
+  @media (min-width: 37.5em) {
+    .hero h1 {
+      display: block; } }
+  .hero h1 .middle {
+    font-size: 0.6em; }
+
+.hero .hashtag {
+  font-family: 'Luckiest Guy';
+  color: blue;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 70px; }
+
+.action {
+  padding: 0 20px; }
+  .action p {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 23px;
+    font-style: italic; }
+  .action .action-item {
     padding: 20px;
-    color: chocolate; }
-    .first h1 .middle {
-      font-size: 0.6em; }
+    display: flex; }
+    .action .action-item .item-detail {
+      padding: 10px; }
 
-h1 {
-  font-weight: normal; }
+.facts {
+  padding: 40px; }
+  .facts .showProblem {
+    color: #777070;
+    text-align: center;
+    font-family: alfaslab;
+    font-weight: 100;
+    font-size: 5vw;
+    letter-spacing: 10px; }
+  .facts .gallery img {
+    transition: all .9s;
+    border: 15px solid chocolate;
+    border-radius: 50%;
+    margin: 10px;
+    height: auto;
+    width: 150px; }
+    .facts .gallery img:hover {
+      width: 200px; }
+
+.takeaction .takeaction-items {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .takeaction .takeaction-items .item {
+    transition: all .9s;
+    color: white;
+    margin: 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    border-radius: 5px; }
+    .takeaction .takeaction-items .item span {
+      font-size: 25px;
+      font-family: 'Luckiest Guy';
+      margin-bottom: 20px; }
+    .takeaction .takeaction-items .item svg {
+      color: white;
+      font-size: 150px; }
+    .takeaction .takeaction-items .item img {
+      max-width: 150px; }
+    .takeaction .takeaction-items .item p {
+      max-width: 300px; }
+  .takeaction .takeaction-items .privat {
+    background: rgba(255, 165, 0, 0.6);
+    transition: all 0.8s; }
+    .takeaction .takeaction-items .privat:hover {
+      background: rgba(255, 165, 0, 0.9); }
+      .takeaction .takeaction-items .privat:hover p {
+        display: block; }
+  .takeaction .takeaction-items .biker {
+    background: rgba(50, 199, 50, 0.6); }
+    .takeaction .takeaction-items .biker:hover {
+      background: rgba(50, 199, 50, 0.9); }
+  .takeaction .takeaction-items .workshop {
+    background: rgba(31, 131, 255, 0.6); }
+    .takeaction .takeaction-items .workshop:hover {
+      background: rgba(31, 131, 255, 0.9); }
+  .takeaction .takeaction-items .ngo {
+    background: rgba(96, 119, 119, 0.6); }
+    .takeaction .takeaction-items .ngo:hover {
+      background: rgba(96, 119, 119, 0.9); }
+  .takeaction .takeaction-items .source {
+    background: rgba(138, 94, 40, 0.6); }
+    .takeaction .takeaction-items .source:hover {
+      background: rgba(138, 94, 40, 0.9); }
+
+.footer {
+  text-align: center; }
+  .footer .fa-heart {
+    color: red; }
+
+.debug {
+  border: 1px solid red; }
+
+section {
+  margin: 200px 0;
+  min-height: 500px; }
