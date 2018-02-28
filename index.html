@@ -13,11 +13,12 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/transformed.css">
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+    </style>
 </head>
 
 <body>
@@ -28,163 +29,284 @@
     <!-- Add your site or application content here -->
 
 
-    <div class="container">
+    <div id="app" class="container">
         <div class="header">
-
             <nav class="navigation">
                 <div class="mobileNav">
-                    <a href="javascript:void(0);" class="icon"><span class="open">&#9776;</span><span class="close">x close</span></a>
+                    <a href="javascript:void(0);" class="icon" @click="toggleNav">
+                        <span v-show="!showMobileNav">&#9776;</span>
+                        <span v-show="showMobileNav">x close</span>
+                    </a>
                 </div>
-                <div class="links">
-                    <a href="#action" class="link">Die Aktion</a>
-                    <a href="#facts" class="link">Fakten</a>
-                    <a href="#" class="link">Forderungen</a>
-                    <a href="#" class="link">Lösungen</a>
-                    <a href="#" class="link">Kontakt</a>
+                <div class="links" :class="{show: showMobileNav}">
+                    <a href="#idea" v-scroll-to="'#idea'" class="link" :class="{active: isActive == 1}" @click="setActive(1)">Die Idee</a>
+                    <a href="#plan" v-scroll-to="'#plan'" class="link" :class="{active: isActive == 2}" @click="setActive(2)">Karte</a>
+                    <a href="#takeaction" v-scroll-to="'#takeaction'" class="link special" :class="{active: isActive == 3}" @click="setActive(3)">Mitgestalten</a>
+                    <a href="#facts" v-scroll-to="'#facts'" class="link" :class="{active: isActive == 4}" @click="setActive(4)">Lösungen</a>
+                    <a href="#contact" v-scroll-to="'#contact'" class="link" :class="{active: isActive == 5}" @click="setActive(5)">Kontakt</a>
                 </div>
             </nav>
         </div>
         <div class="content">
             <section class="hero">
                 <div class="hashtag">
-                    <span>#foodBerg<span>
+                    <span>#foodBerg</span>
                 </div>
             </section>
-            <section id="action" class="action">
-                <h2>dIE aKTION</h2>
-                <p>Der Foodberg repräsentiert ein enormes Problem von vielen. Die reglose Veschwendung der Ressourcen unserer Erde
-                Darum ist es jetzt Zeit lösungsorientiert an die Themen heranzutreten. Jeder ist eingeladen vor Ort seine Lösungen zu präsentieren.
-                Egal ob NGOs, BäuerInnen, LebensmittelretterInnen, KöchInnen oder Privatpersonen. Am Heldenplatz wollen wir ein Zeichen setzen dass
-                Lösungen vorhanden sind und diese ebenso als Forderung an die Politik stellen. <br><br> Es ist Zeit zu handeln!
+            <section id="idea" class="idea">
+                <h2>Die Idee</h2>
+                <p>Der Foodberg wird an einem öffentlichen Paltz (wie zB dem Heldeplatz) frühestens September 2018 entstehen.
+                    Menschen aus der Zivilgesellschaft sind eingeladen vom System ausgeschiedene und abgehlente Lebensmittel
+                    vorbeizubringen, den Foodberg zu nutzen um anschauliche Lösungen den Menschen schmackhaft zu machen und
+                    jede kann sich natürlich auch die Lebensmittel mitnehmen! <br><br>
+                    
+                    Der Foodberg repräsentiert eine sehr vielschichtige
+                    Problematik und eignet sich daher sehr gut als Projektionsfläche für Lösungen (zB von der Vergiftung
+                    der Bananenpflücker bis zur Verbrennung der unbrennbaren Banane). Damit auch die gesamte Tiefe der Problematik
+                    mitgedacht wird ist es offentsichtlich notwendig dass möglichst viele verschiedene Gruppen mitwirken.
+                    Es ist längst an der Zeit lösungsorientiert an die Themen heranzutreten.
                 </p>
-                <div class="action-items">
-                    <div class="item">
-                        <div class="time item-detail">10.00</div>
-                        <div class="title item-detail">ChainOfFood</div>
-                        <div class="description item-detail">
-                            Fahrradfahrer organisieren sich in Gruppen und holen von verschiedenen
-                            Betrieben und anderen Quellen Lebensmttel und
-                            und bringen sie zum Foodberg. Mehr Info gibts unter "Mach Mit!"
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="time item-detail">12.00</div>
-                        <div class="title item-detail">Foodberg</div>
-                        <div class="description item-detail">
-                            Ab 12 Uhr startet der Foodberg bis in den Abend hinein. Es ensteht ein
-                            Berg aus genießbaren Lebensmittel mitten am Heldenplatz. Jeder ist eingeladen mitzumachen,
-                            kann sich kostenlos Lebensmittel mitnehmen oder vor Ort kreativ sein! Mehr Details gibts unter
-                            "Mach Mit!"
-                        </div>
+            </section>
+            <section id="plan" class="plan">
+                <h2>Karte</h2>
+                <p>Hier entsteht später eine interaktive Karte</p>
+                <div class="interactive">
+                    <div class="foodberg">
+                        <img src="./img/foodberg.png" alt="" />
                     </div>
                 </div>
             </section>
             <section id="takeaction" class="takeaction">
                 <h2>Mach Mit!</h2>
                 <div class="takeaction-items">
-                    <div class="item biker">
-                        <span>Radfahrer</span>
-                    <img src="./img/bike.svg" alt="" />
-                    <p>Alle RadfahrerInnen mit Anhänger oder jene die ein Lastenrad haben sind eingeladen Lebensmittel zum #foodBerg
-                        zu bringen. Wir unterstützen dich bei der Suche von Lebensmittel und vernetzen dich mit Betrieben.
-                        Schreibe dazu einfach unserem Radbotschafter unter fahrrad.foodberg@gmail.com
-                    </p>
-                </div>
-                <div class="item privat">
-                    <span>Privatperson</span>
-                    <i class="far fa-smile"></i>
-                    <p>Jeder Mensch kann was vorbeibringen oder sich Lebensmittel holen. Kontaktier uns für Ratschläge rund
-                        um Dumpstern, Vernetzungen und
-                    </p>
-                </div>
-                <div class="item workshop">
-                    <span>Workshop</span>
-                    <img src="./img/toolbox.svg" alt="">
-                    <p>Vor Ort kann man auch einen kreativen Workshop anmelden. Alles was mit der Thematik von Lebensmittel
-                        hat kann man einbringen. Willst du zum Beispiel eine mobile Küche vor Ort aufstellen, hast aber keine
-                        Transportmöglichkeit? Egal. Schreib uns trotzdem. Vielleicht können wir dich mit einem unserer Fahrer
-                        vernetzen.
-                    </p>
-                </div>
-        </div>
+                    <div class="item" v-for="(item,index) in items" :class="[item.alias,{itemBack: isActive == index, test: isActive == index}]">
+                        <div class="item-header">
+                            <!--
+                            <div class="left-button" v-show="isActive == index">
+                                <img src="./img/left-arrow.svg" class="left-arrow" />
+                            </div>
+                        -->
+                            <span>{{item.title}}</span>
+                        </div>
 
-        <div class="takeaction-items">
-            <div class="item ngo">
-                <span>NGO's</span>
-                <img src="./img/ngo.svg" alt="">
-                <p>Jeder Mensch kann was vorbeibringen oder sich Lebensmittel holen. Kontaktier uns für Ratschläge rund um Dumpstern,
-                    Vernetzungen und
+                        <img :src="'./img/' + item.alias + '.svg'" class="icon" alt="" />
+                        <p class="animated fadeIn">
+                            {{item.content}}
+                        </p>
+                        <div class="item-button" v-show="isActive == index && item.alias != 'workshop'" @click="showFormModal = true">MITMACHEN</div>
+                        <div class="item-button" v-show="isActive != index" @click="showItemContent(index)">MEHR INFO</div>
+                        <a class="item-button animated flipInY" href="#workshopkarte" v-show="isActive == index && item.alias == 'workshop'" v-scroll-to="'#workshopkarte'">WORKSHOPKARTE</a>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="myModal" v-show="showFormModal" class="formModal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close" @click="showFormModal = false">&times;</span>
+                        <h3>Fülle das Formular aus:</h3>
+                        <form action="/action_page.php">
+                            <div class="teilnahmebedingung">
+                                <span>Teilnahmebedingungen</span>
+                                <ul>
+                                    <li>Keine parteipolitische Betätigung</li>
+                                    <li>Keine Werbung</li>
+                                    <li>Keine Firmen</li>
+                                    <li>Positiv Lösungsorientierte Ansätze</li>
+                                </ul>
+                            </div>
+                            First name:
+                            <br>
+                            <input type="text" name="firstname" value="Mickey">
+                            <br> Last name:
+                            <br>
+                            <input type="text" name="lastname" value="Mouse">
+                            <br>
+                            <br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="workshopkarte">
+                    <h3 id="workshopkarte">Workshops in Planung</h3>
+                    <p>Dieser Inhalt wird später als Karte dargestellt.</p>
+
+                    <table>
+                        <tr>
+                            <th>Workshop</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>Für jedes milchsauer vergorene Gemüse aus dem haufen kehrt Leben zurück. Eine Biene beginnt zu
+                                sammeln, ein Vogel zu zwitschern oder ein Obdachloser zu tanzen</td>
+                            <td>Mitmachen</td>
+                        </tr>
+                        <tr>
+                            <td>Aus dem Foodberg gewonnener Sirup wird an Menschen ausgeschenkt</td>
+                            <td>Mitmachen</td>
+                        </tr>
+                        <tr>
+                            <td>Kleben des -100% Pickerls auf Lebensmittel</td>
+                            <td>Mitmachen</td>
+                        </tr>
+                        <tr>
+                            <td>Reale und fiktive Schicksale rund um das Leben einer Banane werden theatralisch dargestellt.</td>
+                            <td>Mitmachen</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+            <section id="facts">
+                <h2>Fakten/Lösungen</h2>
+                <p>
+                    Text folgt.
                 </p>
-            </div>
-            <div class="item source">
-                <span>BAUERN & BETRIEBE</span>
-                <img src="./img/store.svg" alt="">
-                <p>Auch
+            </section>
+            <!--
+            <section id="facts" class="facts">
+                <h2>Facts</h2>
+                <div class="showProblem debug">
+                    <span id="truth">Some text to the image</span>
+                </div>
+                <div class="gallery debug">
+                    <img id="fact1" src="./img/dumpster1.jpg" alt="">
+                    <img id="fact2" src="./img/dumpster1.jpg" alt="">
+                    <img id="fact3" src="./img/dumpster1.jpg" alt="">
+                </div>
+            </section>
+        -->
+            <section id="contact">
+                <h2>Kontakt</h2>
+                <p>
+                    Fragen, Anregungen, Wünsche?
                 </p>
-            </div>
+            </section>
         </div>
-        </section>
-        <section id="facts" class="facts">
-            <h2>Facts</h2>
-            <div class="showProblem debug">
-                <span id="truth">Some text to the image</span>
-            </div>
-            <div class="gallery debug">
-                <img id="fact1" src="./img/dumpster1.jpg" alt="">
-                <img id="fact2" src="./img/dumpster1.jpg" alt="">
-                <img id="fact3" src="./img/dumpster1.jpg" alt="">
-            </div>
-        </section>
-        <section>
-            Section 3
-        </section>
+        <div class="footer">
+            <p>Handmade with
+                <i class="fas fa-heart"></i> by Ifraimov David</p>
+        </div>
     </div>
-    <div class="footer">
-        <p>Handmade with <i class="fas fa-heart"></i> by Ifraimov David</p>
-    </div>
-
-    </div>
-
-
 
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
     </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/vue-scrollto"></script>
     <script>
-        //toggle navigation
-        $(".icon").click(function () {
-            if ($(".links").css("display") == "flex") {
-                $(".links").slideUp();
-                $(".open").css("display", "block");
-                $(".close").css("display", "none");
-            } else {
-                $(".links").slideDown();
-                $(".links").css("display", "flex");
-                $(".open").css("display", "none");
-                $(".close").css("display", "block");
+        Vue.use(VueScrollTo);
+        console.log(VueScrollTo);
+        VueScrollTo.setDefaults({
+            duration: 1000,
+            easing: "ease",
+            offset: -90,
+        })
+        new Vue({
+            el: ".navigation",
+            data: {
+                showMobileNav: false,
+                isActive: 0,
+                scroll: {
+                    duration: 5000,
+                    offset: 300
+                }
+            },
+            methods: {
+                toggleNav: function () {
+                    this.showMobileNav = !this.showMobileNav;
+                },
+                setActive: function (num) {
+                    this.isActive = num;
+                }
+
             }
+        })
+
+        new Vue({
+            el: ".takeaction",
+            data: {
+                content: "",
+                items: [{
+                    "title": "Radfahrer",
+                    "alias": "biker",
+                    "content": "RadfahrerInnen (Anhänger oder Lastenrad von Vorteil) sind eingeladen Lebensmittel zum #foodBerg zu bringen. Wir unterstützen dich bei der Suche von Lebensmittel und vernetzen dich mit Betrieben. Klicke dazu einfach auf 'Mitmachen' und fülle das Formular aus."
+                },
+                {
+                    "title": "Privatperson",
+                    "alias": "person",
+                    "content": "Jeder Mensch kann was vorbeibringen oder sich Lebensmittel holen. Kontaktier uns für Ratschläge rund ums Dumpstern oder Lebensmittelrettung."
+                },
+                {
+                    "title": "Workshop",
+                    "alias": "workshop",
+                    "content": "Das Projekt lebt davon, dass auch du als Gruppe oder Individuum deinen positiven Lösungsansatz vor Ort gestaltest. Um zu sehen welche Workshops es bereits gibt, bei einem Workshop mitzumachen oder selber einen zu gestalten, gehe zur Workshopkarte." +
+                        ""
+                },
+                {
+                    "title": "NGO's",
+                    "alias": "ngo",
+                    "content": "Text folgt."
+                },
+                {
+                    "title": "Betrieb",
+                    "alias": "betrieb",
+                    "content": "Text folgt."
+                },
+                {
+                    "title": "Bauer",
+                    "alias": "bauer",
+                    "content": "Text folgt."
+                },
+                ],
+                isActive: -1,
+                isFlipped: -1,
+                showFormModal: false
+            },
+            methods: {
+                showItemContent: function (num) {
+
+                    this.content = this.items[num].content;
+                    if (this.isActive == num) {
+                        this.isActive = -1;
+                    } else {
+                        this.isActive = num;
+                    }
+                    console.log('aft' + this.isActive);
+                },
+                flipCard: function (num) {
+                    /*
+                    console.log("flipc w " + num)
+                    if (this.isFlipped == num) {
+                        this.isFlipped = -1;
+                    } else {
+                        this.isFlipped = num;
+                    }
+                    */
+                    $(".item").flip();
+                }
+            }
+        })
+
+        new Vue({
+            el: "#plan",
+            data: {
+
+            },
+            computed: {
+
+            }
+        })
 
 
-        });
 
-        $(window).scroll(function () {
-            // 100 = The point you would like to fade the nav in.
-
-            if ($(window).scrollTop() > 100) {
-
-                $('.navigation').addClass('show');
-
-            } else {
-
-                $('.navigation').removeClass('show');
-
-            };
-        });
 
         var truth = document.getElementById("truth");
 
@@ -207,8 +329,13 @@
     </script>
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
-        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+        window.ga = function () {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>

@@ -1,27 +1,47 @@
 body {
   font-family: 'Roboto', sans-serif; }
 
+section {
+  width: 70%;
+  margin: 0 auto;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+/** HEADINGS **/
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Luckiest Guy', cursive; }
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 100; }
+
+h1 {
+  display: none;
+  font-size: 7vw;
+  text-align: center;
+  padding: 20px;
+  color: chocolate; }
+  @media (min-width: 37.5em) {
+    h1 {
+      display: block; } }
+  h1 .middle {
+    font-size: 0.6em; }
 
 h2 {
-  color: #777070;
+  color: orange;
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   font-size: 3em; }
-  h2 span {
-    display: block;
-    color: chocolate;
-    padding: 50px;
-    font-size: 5vw;
-    font-weight: bold;
-    letter-spacing: 10px; }
+
+h3 {
+  font-size: 2em;
+  color: #8395f7; }
 
 .container {
-  margin-top: 150px; }
+  margin-top: 113px; }
 
 .header .navigation {
   /* fixed on top */
@@ -66,12 +86,9 @@ h2 {
     @media (min-width: 50em) {
       .header .navigation .mobileNav {
         display: none; } }
-    .header .navigation .mobileNav .open {
-      display: block; }
-    .header .navigation .mobileNav .close {
-      display: none; }
     .header .navigation .mobileNav span {
-      padding: 0 10px 0 10px; }
+      padding: 0 10px 0 10px;
+      display: block; }
   .header .navigation .links {
     background: rgba(246, 244, 221, 0);
     display: none;
@@ -88,47 +105,59 @@ h2 {
       @media (min-width: 50em) {
         .header .navigation .links .link {
           background: none; } }
+    .header .navigation .links .active {
+      color: orange; }
+      .header .navigation .links .active:after {
+        width: 100%; }
+    .header .navigation .links .special {
+      color: #17d417; }
+      .header .navigation .links .special:hover {
+        color: orange; }
+  .header .navigation .show {
+    display: flex; }
 
 .header .show {
   background: white; }
 
-.hero h1 {
-  display: none;
-  font-size: 7vw;
-  text-align: center;
-  padding: 20px;
-  color: chocolate; }
-  @media (min-width: 37.5em) {
-    .hero h1 {
-      display: block; } }
-  .hero h1 .middle {
-    font-size: 0.6em; }
-
 .hero .hashtag {
   font-family: 'Luckiest Guy';
   color: blue;
-  font-size: 80px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
-  padding: 70px; }
+  transition: font-size 1s; }
+  @media (min-width: 37.5em) {
+    .hero .hashtag {
+      font-size: 80px; } }
 
-.action {
-  padding: 0 20px; }
-  .action p {
-    width: 70%;
-    margin: 0 auto;
-    font-size: 23px;
-    font-style: italic; }
-  .action .action-item {
-    padding: 20px;
-    display: flex; }
-    .action .action-item .item-detail {
-      padding: 10px; }
+.idea p {
+  margin: 0 auto;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center; }
+
+.plan .interactive {
+  position: relative;
+  width: 100%;
+  min-height: 500px; }
+  .plan .interactive .foodberg {
+    position: absolute;
+    top: 100px;
+    right: auto;
+    bottom: auto;
+    left: 100px;
+    width: 250px; }
+
+.plan .action-item {
+  padding: 20px;
+  display: flex; }
+  .plan .action-item .item-detail {
+    padding: 10px; }
 
 .facts {
   padding: 40px; }
   .facts .showProblem {
-    color: #777070;
+    color: grey;
     text-align: center;
     font-family: alfaslab;
     font-weight: 100;
@@ -151,49 +180,153 @@ h2 {
   flex-wrap: wrap;
   justify-content: center; }
   .takeaction .takeaction-items .item {
-    transition: all .9s;
     color: white;
     margin: 2px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
-    border-radius: 5px; }
+    justify-content: center;
+    width: 290px;
+    height: 250px;
+    border-radius: 5px;
+    transition: background 2s; }
+    .takeaction .takeaction-items .item .item-header .left-button {
+      text-align: center;
+      width: 15%;
+      margin: 0 10px 0 0; }
+      .takeaction .takeaction-items .item .item-header .left-button .left-arrow {
+        width: 26px; }
+    .takeaction .takeaction-items .item .item-header .right-button {
+      width: 85%;
+      padding: 4px;
+      text-align: center; }
+    .takeaction .takeaction-items .item .item-button {
+      font-family: "Roboto";
+      font-size: 20px;
+      background: transparent;
+      transition: background 2s, color 1s;
+      color: white;
+      border-radius: 4px;
+      width: 90%;
+      padding: 10px;
+      text-align: center; }
+    .takeaction .takeaction-items .item:hover .item-button {
+      cursor: pointer;
+      background: white;
+      transition: background 1s, color .6s; }
     .takeaction .takeaction-items .item span {
       font-size: 25px;
-      font-family: 'Luckiest Guy';
-      margin-bottom: 20px; }
+      font-family: 'Luckiest Guy'; }
     .takeaction .takeaction-items .item svg {
       color: white;
       font-size: 150px; }
-    .takeaction .takeaction-items .item img {
-      max-width: 150px; }
+    .takeaction .takeaction-items .item .icon {
+      max-width: 150px;
+      max-height: 140px;
+      margin: 10px 0 20px 0;
+      transition: max-width 1s; }
     .takeaction .takeaction-items .item p {
+      display: none;
       max-width: 300px; }
-  .takeaction .takeaction-items .privat {
-    background: rgba(255, 165, 0, 0.6);
-    transition: all 0.8s; }
-    .takeaction .takeaction-items .privat:hover {
+  .takeaction .takeaction-items .itemBack .icon {
+    display: none; }
+  .takeaction .takeaction-items .itemBack p {
+    display: block; }
+  .takeaction .takeaction-items .isFliped {
+    background: black;
+    transform: rotateY(180deg); }
+  .takeaction .takeaction-items .person {
+    background: rgba(255, 165, 0, 0.6); }
+    .takeaction .takeaction-items .person:hover {
       background: rgba(255, 165, 0, 0.9); }
-      .takeaction .takeaction-items .privat:hover p {
-        display: block; }
+      .takeaction .takeaction-items .person:hover .item-button {
+        color: orange; }
   .takeaction .takeaction-items .biker {
     background: rgba(50, 199, 50, 0.6); }
     .takeaction .takeaction-items .biker:hover {
       background: rgba(50, 199, 50, 0.9); }
+      .takeaction .takeaction-items .biker:hover .item-button {
+        color: #32c732; }
   .takeaction .takeaction-items .workshop {
     background: rgba(31, 131, 255, 0.6); }
     .takeaction .takeaction-items .workshop:hover {
       background: rgba(31, 131, 255, 0.9); }
+      .takeaction .takeaction-items .workshop:hover .item-button {
+        color: #1f83ff; }
   .takeaction .takeaction-items .ngo {
-    background: rgba(96, 119, 119, 0.6); }
+    background: rgba(128, 40, 127, 0.6); }
     .takeaction .takeaction-items .ngo:hover {
-      background: rgba(96, 119, 119, 0.9); }
-  .takeaction .takeaction-items .source {
+      background: rgba(128, 40, 127, 0.9); }
+      .takeaction .takeaction-items .ngo:hover .item-button {
+        color: #80287f; }
+  .takeaction .takeaction-items .betrieb {
     background: rgba(138, 94, 40, 0.6); }
-    .takeaction .takeaction-items .source:hover {
+    .takeaction .takeaction-items .betrieb:hover {
       background: rgba(138, 94, 40, 0.9); }
+      .takeaction .takeaction-items .betrieb:hover .item-button {
+        color: #8a5e28; }
+  .takeaction .takeaction-items .bauer {
+    background: rgba(255, 37, 58, 0.6); }
+    .takeaction .takeaction-items .bauer:hover {
+      background: rgba(255, 37, 58, 0.9); }
+      .takeaction .takeaction-items .bauer:hover .item-button {
+        color: #8a5e28; }
+
+.takeaction .formModal {
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  /* Modal Content/Box */
+  /* The Close Button */ }
+  .takeaction .formModal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */ }
+  .takeaction .formModal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold; }
+  .takeaction .formModal .close:hover,
+  .takeaction .formModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer; }
+
+.takeaction .workshopkarte table {
+  border-collapse: collapse;
+  width: 100%; }
+
+.takeaction .workshopkarte th, .takeaction .workshopkarte td {
+  text-align: left;
+  padding: 8px; }
+
+.takeaction .workshopkarte tr:nth-child(even) {
+  background-color: #f2f2f2; }
+
+.takeaction .workshopkarte th {
+  background-color: #4CAF50;
+  color: white; }
 
 .footer {
   text-align: center; }
@@ -202,7 +335,3 @@ h2 {
 
 .debug {
   border: 1px solid red; }
-
-section {
-  margin: 200px 0;
-  min-height: 500px; }

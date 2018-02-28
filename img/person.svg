@@ -1,24 +1,38 @@
-<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <linearGradient id="imagebot_44" y2="-73.88138" x2="50.73636" y1="-77.7527" x1="48.67825">
-   <stop id="imagebot_51" stop-color="#fcf9fb" offset="0"/>
-   <stop id="imagebot_50" stop-color="#fcf9fb" stop-opacity="0" offset="1"/>
-  </linearGradient>
-  <linearGradient xlink:href="#imagebot_44" id="imagebot_14" x1="-0.76968" y1="0.0011" x2="0.75949" y2="1.01813"/>
- </defs>
- <metadata id="imagebot_15">image/svg+xml</metadata>
- <g id="imagebot_2" label="Layer 1">
-  <path transform="translate(-0.000457764 0.0000610352) matrix(1 0 0 1 229.669 -548.408)" label="Layer 1" opacity="0.8" fill="url(#imagebot_14)" d="M-206.82877,565.402L-204.79678,566.31995C-203.25441,567.03302 -204.04195,566.65714 -202.42896,567.44654C-206.55579,569.38717 -202.71708,570.06426 -206.86458,572.58344L-206.85438,571.88159C-206.80418,567.86996 -207.18393,573.80717 -206.82878,565.402L-206.82877,565.402z" id="imagebot_13"/>
-  <g transform="translate(-0.000457764 0.0000610352) matrix(1 0 0 1 229.669 -548.408)" label="Layer 1" id="imagebot_3">
-   <g id="imagebot_6">
-    <path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" d="M-218.32743,575.69067C-218.32743,575.69067 -206.82905,596.69033 -192.22524,575.69067" id="imagebot_9"/>
-    <path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="1.34892" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" id="imagebot_8" d="M-221.57143,575.18814C-221.57143,575.18814 -218.18638,577.24 -217.59853,573.20498"/>
-    <path fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="1.34892" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" d="M-192.66018,572.78146C-192.66018,572.78146 -193.11429,576.7137 -189.20149,575.56613" id="imagebot_7"/>
-   </g>
-   <ellipse fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-dashoffset="0" ry="5.08029" rx="1.31387" cy="566.0556" cx="-210.35663" id="imagebot_5"/>
-   <ellipse fill="#000000" fill-rule="nonzero" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-dashoffset="0" id="imagebot_4" cx="-201.23253" cy="566.0556" rx="1.31387" ry="5.08029"/>
-  </g>
-  <title>Layer 1</title>
-  <path transform="translate(0 -2) matrix(0.0536913 0 0 0.0536913 -6 6)" d="M 156.26948457402813 373.84051164772984 L 156.26948457402813 373.84051164772984 C 156.26948457402813 150.81643967317683 337.06635312483877 -29.980428877633607 560.0904250993916 -29.980428877633607 L 560.0904250993916 -29.980428877633607 C 667.1897009835579 -29.980428877633607 769.9038608826907 12.56495292475054 845.6351662712198 88.29601439459066 C 921.3665258639021 164.02707586443103 963.9113656247554 266.7412357635634 963.9113656247554 373.84051164772984 L 963.9113656247554 373.84051164772984 C 963.9113656247554 596.8634724371445 783.1133858888063 777.6614521730932 560.0904250993916 777.6614521730932 L 560.0904250993916 777.6614521730932 C 337.06635312483877 777.6614521730932 156.26948457402813 596.8634724371445 156.26948457402813 373.84051164772984 z" id="imagebot_57" fill-opacity="0" stroke-width="38" stroke="#000000" fill="#ccc"/>
- </g>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 106.059 106.059" style="enable-background:new 0 0 106.059 106.059;" xml:space="preserve">
+<g>
+	<path d="M90.546,15.518C69.858-5.172,36.199-5.172,15.515,15.513C-5.173,36.198-5.171,69.858,15.517,90.547   c20.682,20.684,54.341,20.684,75.027-0.004C111.23,69.858,111.229,36.2,90.546,15.518z M84.757,84.758   c-17.494,17.494-45.96,17.496-63.455,0.002c-17.498-17.497-17.496-45.966,0-63.46C38.796,3.807,67.261,3.805,84.759,21.302   C102.253,38.796,102.251,67.265,84.757,84.758z M33.24,38.671c0-3.424,2.777-6.201,6.201-6.201c3.423,0,6.2,2.776,6.2,6.201   c0,3.426-2.777,6.202-6.2,6.202C36.017,44.873,33.24,42.097,33.24,38.671z M61.357,38.671c0-3.424,2.779-6.201,6.203-6.201   c3.423,0,6.2,2.776,6.2,6.201c0,3.426-2.776,6.202-6.2,6.202S61.357,42.097,61.357,38.671z M76.017,64.068   c-3.843,8.887-12.843,14.629-22.927,14.629c-10.301,0-19.354-5.771-23.064-14.703c-0.636-1.529,0.089-3.285,1.62-3.921   c0.376-0.155,0.766-0.229,1.15-0.229c1.176,0,2.292,0.695,2.771,1.85c2.777,6.686,9.655,11.004,17.523,11.004   c7.69,0,14.528-4.321,17.42-11.011c0.658-1.521,2.424-2.222,3.944-1.563S76.675,62.548,76.017,64.068z" fill="#FFFFFF"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
 </svg>
