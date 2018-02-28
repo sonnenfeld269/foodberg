@@ -69,7 +69,7 @@
             </section>
             <section id="plan" class="plan">
                 <h2>Karte</h2>
-                <p>Hier entsteht später eine interaktive Karte</p>
+                <div class="hinweis">Hier entsteht später eine interaktive Karte</div>
                 <div class="interactive">
                     <div class="foodberg">
                         <img src="./img/foodberg.png" alt="" />
@@ -93,8 +93,8 @@
                         <p class="animated fadeIn">
                             {{item.content}}
                         </p>
-                        <div class="item-button" v-show="isActive == index && item.alias != 'workshop'" @click="showFormModal = true">MITMACHEN</div>
-                        <div class="item-button" v-show="isActive != index" @click="showItemContent(index)">MEHR INFO</div>
+                        <div class="item-button animated flipInX" v-show="isActive == index && item.alias != 'workshop'" @click="showFormModal = true">MITMACHEN</div>
+                        <div class="item-button animated flipInY" v-show="isActive != index" @click="showItemContent(index)">MEHR INFO</div>
                         <a class="item-button animated flipInY" href="#workshopkarte" v-show="isActive == index && item.alias == 'workshop'" v-scroll-to="'#workshopkarte'">WORKSHOPKARTE</a>
                     </div>
                 </div>
@@ -116,6 +116,7 @@
                                     <li>Positiv Lösungsorientierte Ansätze</li>
                                 </ul>
                             </div>
+                            <!--
                             First name:
                             <br>
                             <input type="text" name="firstname" value="Mickey">
@@ -125,6 +126,8 @@
                             <br>
                             <br>
                             <input type="submit" value="Submit">
+                            -->
+                            <div class="hinweis">Forumlar folgt.</div>
                         </form>
                     </div>
 
@@ -132,8 +135,8 @@
 
                 <div class="workshopkarte">
                     <h3 id="workshopkarte">Workshops in Planung</h3>
-                    <p>Dieser Inhalt wird später als Karte dargestellt.</p>
-
+                    <div class="hinweis">Dieser Inhalt wird später als Karte dargestellt.</div>
+                    <br><br>
                     <table>
                         <tr>
                             <th>Workshop</th>
@@ -235,7 +238,7 @@
             data: {
                 content: "",
                 items: [{
-                    "title": "Radfahrer",
+                    "title": "Radfahrerin",
                     "alias": "biker",
                     "content": "RadfahrerInnen (Anhänger oder Lastenrad von Vorteil) sind eingeladen Lebensmittel zum #foodBerg zu bringen. Wir unterstützen dich bei der Suche von Lebensmittel und vernetzen dich mit Betrieben. Klicke dazu einfach auf 'Mitmachen' und fülle das Formular aus."
                 },
@@ -261,7 +264,7 @@
                     "content": "Text folgt."
                 },
                 {
-                    "title": "Bauer",
+                    "title": "Landwirtin",
                     "alias": "bauer",
                     "content": "Text folgt."
                 },
